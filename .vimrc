@@ -1,3 +1,4 @@
+" - To use Vim plugin manager: git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 "--- --- --- --- Manager Plugins --- --- --- --- ---"
 
 set nocompatible              " be iMproved, required
@@ -12,6 +13,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'ervandew/supertab'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -21,10 +23,8 @@ filetype plugin indent on    " required
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
-"let g:ctrlp_map = '<F3>'
-"let g:ctrlp_map = 'CtrlPBufTag'
-
 nmap <F3> :CtrlPBufTag<CR>
+nmap <F4> :CtrlPTag<CR>
 
 "--- --- --- --- Develop Patterns --- --- --- --- ---"
 
@@ -54,13 +54,14 @@ autocmd BufWritePost .vimrc source %
 
 
 "--- --- --- --- Plugin settings --- --- --- --- ---"
-" CtrlP "
+"/
+"/ CtrlP
+"/
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-
+let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 
 
 "--- --- --- --- Tips and Reminders --- --- --- --- ---"
 " - Press 'zz' to instantly center the line where the cursor is located.
-" - To use Vim plugin manager: git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 "Thanks to Jeffrey Way for the laracast
