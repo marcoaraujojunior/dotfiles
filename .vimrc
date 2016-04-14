@@ -25,6 +25,11 @@ let g:ctrlp_cmd = 'CtrlP'
 
 nmap <F3> :CtrlPBufTag<CR>
 nmap <F4> :CtrlPTag<CR>
+nmap <Leader><space> :nohlsearch<CR>
+
+"--- --- --- --- Search --- --- --- --- ---"
+set hlsearch
+set incsearch
 
 "--- --- --- --- Develop Patterns --- --- --- --- ---"
 
@@ -47,10 +52,17 @@ set list lcs=trail:·,tab:»·
         set showmatch       " highlight matching [{()}]
 
 "--- --- --- --- Auto-Commands --- --- --- --- ---"
-autocmd Filetype gitcommit setlocal spell textwidth=72
+"Set limit to commit
+augroup committing
+    autocmd!
+    autocmd Filetype gitcommit setlocal spell textwidth=72
+augroup END
 
 "Automatically source the Vimrc file on save.
-autocmd BufWritePost .vimrc source %
+augroup autosourcing
+    autocmd!
+    autocmd BufWritePost .vimrc source %
+augroup END
 
 
 "--- --- --- --- Plugin settings --- --- --- --- ---"
