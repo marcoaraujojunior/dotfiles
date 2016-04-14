@@ -27,10 +27,17 @@ nmap <F3> :CtrlPBufTag<CR>
 nmap <F4> :CtrlPTag<CR>
 nmap <Leader><space> :nohlsearch<CR>
 
+"Make Ctrl-t default behavior to CtrlP
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
+
 "--- --- --- --- Search --- --- --- --- ---"
 set hlsearch
 set incsearch
-
+set ignorecase
+set smartcase
 "--- --- --- --- Develop Patterns --- --- --- --- ---"
 
 " show existing tab with 4 spaces width
