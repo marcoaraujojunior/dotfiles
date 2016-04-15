@@ -33,6 +33,8 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
     \ }
 
+inoremap <S-Tab> <C-d>
+
 "--- --- --- --- Search --- --- --- --- ---"
 set hlsearch
 set incsearch
