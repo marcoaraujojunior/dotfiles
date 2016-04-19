@@ -59,7 +59,8 @@ set list lcs=trail:·,tab:»·
         set wildmenu        " visual autocomplete for command menu
         set lazyredraw      " redraw only when we need to. (make vim faster)
         set showmatch       " highlight matching [{()}]
-
+        highlight ColorColumn ctermbg=black guibg=lightgrey
+        let &colorcolumn="81,".join(range(121,999),",")
 "--- --- --- --- Auto-Commands --- --- --- --- ---"
 "Set limit to commit
 augroup committing
