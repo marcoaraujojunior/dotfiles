@@ -14,9 +14,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'ervandew/supertab'
-Plugin 'vim-airline/vim-airline'
-Plugin 'tpope/vim-fugitive'
-Plugin 'ompugao/vim-airline-datetime'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -84,13 +81,6 @@ augroup END
 "/
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
-
-"/
-"/ Airline
-"/
-set laststatus=2
-set showtabline=2
-set noshowmode
 
 "--- --- --- --- Tips and Reminders --- --- --- --- ---"
 " - Press 'zz' to instantly center the line where the cursor is located.
