@@ -1,0 +1,1 @@
+export IP_WLAN=`ip -4 a show wlan0 | grep inet | cut -d/ -f1 | tr -d '[[:space:]]' | sed 's/inet//g'`
